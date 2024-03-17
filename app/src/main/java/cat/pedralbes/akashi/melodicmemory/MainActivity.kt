@@ -10,9 +10,20 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import cat.pedralbes.akashi.melodicmemory.ui.SimonButtonView
 import cat.pedralbes.akashi.melodicmemory.ui.theme.MelodicMemoryTheme
 
 class MainActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Configura el contenido de la actividad como SimonButtonView
+       // setContentView(R.layout.activity_main)
+
+        // Si estás usando el diseño creado en XML, debes eliminar este código y agregar SimonButtonView a tu layout XML.
+        setContentView(SimonButtonView(this, null))
+    }
+    /*
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -42,5 +53,5 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 fun GreetingPreview() {
     MelodicMemoryTheme {
         Greeting("Android")
-    }
+    }*/
 }
